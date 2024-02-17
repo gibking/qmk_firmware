@@ -35,5 +35,23 @@
 				"2,2"
 			]
 		]
-	}
+	},
+	"customKeycodes": [
+		{ "name": "White",
+		  "title": "RGB white",
+		  "shortName": "L_WHITE"
+		},
+		{ "name": "Red",
+		  "title": "RGB red",
+		  "shortName": "L_RED"
+		},
+		{ "name": "Green",
+		  "title": "RGB green",
+		  "shortName": "L_GREEN"
+		},
+		{ "name": "Blue",
+		  "title": "RGB blue",
+		  "shortName": "L_BLUE"
+		}
+	]
 }

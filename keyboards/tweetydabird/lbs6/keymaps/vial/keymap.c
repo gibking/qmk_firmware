@@ -37,3 +37,27 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [3] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  }
 };
 #endif
+
+enum lighting_keycode {
+    L_WHITE = QK_KB_0,  
+    L_RED, 
+    L_GREEN,
+    L_BLUE,
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+	case L_WHITE:
+            if (record->event.pressed) { rgblight_sethsv_noeeprom(HSV_WHITE); return true; }
+        case L_RED:
+            if (record->event.pressed) { rgblight_sethsv_noeeprom(HSV_RED); return true; }
+        case L_GREEN:
+            if (record->event.pressed) { rgblight_sethsv_noeeprom(HSV_GREEN); return true; }
+        case L_BLUE:
+            if (record->event.pressed) { rgblight_sethsv_noeeprom(HSV_BLUE); return true; }
+	default:
+    	    return true;
+
+    }
+}
+
